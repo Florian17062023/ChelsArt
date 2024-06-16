@@ -1,13 +1,18 @@
-/* styles/header.module.css */
 .header {
   display: flex;
-  justify-content: center; /* Centers the image horizontally */
-  align-items: center; /* Centers the image vertically */
-  height: 16vh; /* Example height */
+  justify-content: center;
+  align-items: center;
+  height: 16vh;
   background: white;
 }
 
 .logo {
-  height: 13rem;
+  height: 8rem;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 6rem;
+  }
 }
