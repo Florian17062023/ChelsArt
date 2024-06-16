@@ -41,7 +41,7 @@
   width: 50%;
 }
 
-.card-img-top {
+.cardImgTop {
   border-radius: 8px;
   object-fit: cover;
   width: 100%;
@@ -58,12 +58,12 @@
   text-align: center;
 }
 
-.card-body {
+.cardBody {
   padding: 0;
   margin-top: 1rem;
 }
 
-.card-title {
+.cardTitle {
   margin-bottom: 1rem;
   align-items: center;
 }
@@ -75,8 +75,26 @@
   margin-top: 2rem;
 }
 
-.quantityContainer label {
-  margin-right: 2rem;
+.quantityControls {
+  display: flex;
+  align-items: center;
+}
+
+.quantityButton {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+}
+
+.quantity {
+  font-size: 1.2rem;
+  margin: 0 1rem;
 }
 
 .buyButton {
@@ -114,7 +132,7 @@
     margin-bottom: 1rem;
   }
 
-  .card-img-top {
+  .cardImgTop {
     max-height: 300px;
   }
 
@@ -130,5 +148,13 @@
   .quantityContainer label {
     margin-right: 0;
     margin-bottom: 0.5rem;
+  }
+
+  .quantityControls {
+    flex-direction: column;
+  }
+
+  .quantityButton {
+    margin: 0.5rem 0;
   }
 }

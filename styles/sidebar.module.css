@@ -4,7 +4,7 @@
     top: 0;
     width: 400px;
     height: 100%;
-    background: #d3b899;
+    background-color: rgba(243, 208, 220);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     transition: right 0.3s ease;
     z-index: 1000;
@@ -44,7 +44,7 @@
   .divider {
     border: 0;
     height: 1px;
-    background: #ddd;
+    background: #ffffff;
     margin: 10px 0;
   }
   
@@ -87,7 +87,7 @@
   .quantityContainer {
     display: flex;
     align-items: center;
-    border: 1px solid #ddd;
+    border: 1.5px solid #ffffff;
     padding: 5px;
     margin-top: 10px;
     border-radius: 2rem;

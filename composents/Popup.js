@@ -4,11 +4,10 @@ import { motion } from 'framer-motion';
 import styles from '../styles/popupStyle.module.css';
 
 const ProductPopup = ({ item, onClose, handleAddToCart }) => {
-  const [quantity, setQuantity] = useState(1); // État pour la quantité sélectionnée
+  const [quantity, setQuantity] = useState(1);
 
-  const handleQuantityChange = (event) => {
-    const quantity = parseInt(event.target.value);
-    setQuantity(quantity);
+  const handleQuantityChange = (delta) => {
+    setQuantity(prevQuantity => Math.max(1, prevQuantity + delta));
   };
 
   return (
@@ -25,24 +24,22 @@ const ProductPopup = ({ item, onClose, handleAddToCart }) => {
             orientation="top"
             src={item.image}
             style={{ maxWidth: '100%', height: 'auto' }}
-            className={styles['card-img-top']}
+            className={styles.cardImgTop}
           />
         </div>
         <div className={styles.contentContainer}>
-          <CCardBody className={styles['card-body']}>
-            <CCardTitle className={styles['card-title']}>{item.title}</CCardTitle>
-            <CCardText className={styles['card-text']}>
+          <CCardBody className={styles.cardBody}>
+            <CCardTitle className={styles.cardTitle}>{item.title}</CCardTitle>
+            <CCardText className={styles.cardText}>
               {item.description}
             </CCardText>
-            <div>
+            <div className={styles.quantityContainer}>
               <label htmlFor="quantity">Quantité :</label>
-              <input
-                type="number"
-                id="quantity"
-                name="quantity"
-                value={quantity}
-                onChange={handleQuantityChange}
-              />
+              <div className={styles.quantityControls}>
+                <button onClick={() => handleQuantityChange(-1)} className={styles.quantityButton}>-</button>
+                <span className={styles.quantity}>{quantity}</span>
+                <button onClick={() => handleQuantityChange(1)} className={styles.quantityButton}>+</button>
+              </div>
             </div>
             <div className={styles.price}>
               Prix : {item.price} €

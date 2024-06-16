@@ -91,15 +91,29 @@
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  z-index: 1000; /* Assurez-vous que l'icône du panier soit au-dessus de la sidebar */
-  margin-left: auto; /* Déplace l'icône du panier à l'extrême droite de la barre */
-  margin-right: 20px; /* Ajoute une marge à droite de l'icône du panier pour l'esp */
+  z-index: 1000;
+  margin-left: auto;
+  margin-right: 20px;
 }
 
 .cartIcon:hover {
   background-color: #f0f0f0;
 }
 
+.cartItemCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
