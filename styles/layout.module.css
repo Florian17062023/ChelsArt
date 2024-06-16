@@ -1,0 +1,8 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Ajustez la largeur selon vos besoins */
+    margin: 0 auto; /* Centrer horizontalement */
+  }
+  

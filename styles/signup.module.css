@@ -1,0 +1,120 @@
+/* Styles pour le composant SignUp */
+.container {
+    background-color: rgba(243, 208, 220);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, white, black);
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .input {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .input img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .input input {
+    padding-left: 35px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .socialLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .socialLogin p {
+    margin-bottom: 10px;
+  }
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .socialIcons img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  .loginLink {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(132, 129, 129);
+    text-decoration: none;
+  }
+  
+  .loginLink:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styles pour les petits écrans (smartphones) */
+  @media (max-width: 576px) {
+    .container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .input {
+      margin-bottom: 5px;
+    }
+  
+    .input img {
+      width: 16px;
+      height: 16px;
+      left: 5px;
+    }
+  
+    .input input {
+      padding-left: 25px;
+    }
+  
+    .button {
+      margin-top: 10px;
+    }
+  
+    .socialLogin p {
+      font-size: 0.9rem;
+    }
+  
+    .socialIcons img {
+      width: 30px;
+      height: 30px;
+      margin: 2px;
+    }
+  }

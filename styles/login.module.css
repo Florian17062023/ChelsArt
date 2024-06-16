@@ -1,0 +1,139 @@
+.container {
+    background-color: rgba(243, 208, 220);
+    max-width: 600px;
+    max-height: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, white, black);
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .input {
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .link {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+    color: rgb(132, 129, 129);
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .socialLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .socialLogin p {
+    margin-bottom: 10px;
+  }
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .socialIcons img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .input {
+    position: relative;
+  }
+  
+  .input img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .input input {
+    padding-left: 35px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .socialIcons img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  /* Styles pour les petits écrans (smartphones) */
+@media (max-width: 576px) {
+    .container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .input {
+      margin-bottom: 5px;
+    }
+  
+    .input img {
+      width: 16px;
+      height: 16px;
+      left: 5px;
+    }
+  
+    .input input {
+      padding-left: 25px;
+    }
+  
+    .button {
+      margin-top: 10px;
+    }
+  
+    .link {
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+  
+    .socialLogin p {
+      font-size: 0.9rem;
+    }
+  
+    .socialIcons img {
+      width: 30px;
+      height: 30px;
+      margin: 2px;
+    }
+  }

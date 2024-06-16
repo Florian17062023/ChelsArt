@@ -4,7 +4,8 @@
   align-items: center;
   background: white;
   padding: 10px 0;
-  position: relative;
+  margin-right: auto; /* Aligner la barre de navigation à gauche */
+  flex-grow: 1; /* Permet à la barre de navigation de prendre toute la largeur disponible */
 }
 
 .ul {

@@ -23,3 +23,12 @@ header, nav, footer {
   align-items: center; 
   padding: 2rem; 
 }
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Ajustez cette valeur selon vos besoins */
+  margin: 0 auto; /* Centrer horizontalement */
+}

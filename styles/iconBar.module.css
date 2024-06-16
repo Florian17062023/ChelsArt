@@ -1,0 +1,11 @@
+.iconBar {
+    display: flex;
+    gap: 0.2rem; /* Espace entre les icônes */
+    margin-left: auto; /* Aligner les icônes à droite */
+  }
+  
+  .icon {
+    width: 1.5rem; /* Taille des icônes */
+    height: 1.5rem; /* Taille des icônes */
+  }
+  
