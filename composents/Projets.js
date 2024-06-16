@@ -25,7 +25,7 @@ const Projets = ({ searchTerm }) => {
     { id: 7, title: "L'elephant", image: '/elephant.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.', price: 20 },
     { id: 8, title: 'La vache orange', image: '/vache2.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.', price: 30 },
     { id: 9, title: 'La vache', image: '/vachenoire.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.', price: 25 },
-    { id: 10, title: 'Le tigre', image: '/tigre.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.', price: 45 },
+    { id: 10, title: 'Le tigre', image: '/tigre.JPG', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.', price: 45 },
     { id: 11, title: 'Sac', image: '/sac.JPG', category: 'Accessoires', description: 'This card has supporting text below as a natural lead-in to additional content.', price: 90 },
     { id: 12, title: 'Maillot Blanc', image: '/maillotBlanc.JPG', category: 'Vetements', description: 'This card has supporting text below as a natural lead-in to additional content.', price: 60 },
     { id: 13, title: 'Maillot Bleu', image: '/maillotBleu.JPG', category: 'Vetements', description: 'This card has supporting text below as a natural lead-in to additional content.', price: 70 },
