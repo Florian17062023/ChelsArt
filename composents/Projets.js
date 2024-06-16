@@ -140,7 +140,6 @@ const Projets = ({ searchTerm }) => {
           {cartItems.length > 0 && <span className={styles.cartItemCount}>{cartItems.length}</span>}
         </div>
       </div>
-
       <Sidebar isOpen={showSidebar} onClose={() => setShowSidebar(false)} items={cartItems} onDeleteItem={setCartItems} />
     </>
   );
