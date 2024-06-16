@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
-import { CRow, CCol, CCard, CCardImage, CCardBody, CCardTitle, CCardText, CPagination, CPaginationItem } from '@coreui/react';
+import {
+  CRow, CCol, CCard, CCardImage, CCardBody, CCardTitle, CCardText,
+  CPagination, CPaginationItem
+} from '@coreui/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles/projets.module.css';
 import ProductPopup from './Popup';
 import FilterSearch from './FilterSearch';
-import { FaShoppingCart } from 'react-icons/fa'; // Importation de l'icône du panier
-import Sidebar from './Sidebar'; // Assurez-vous que vous importez Sidebar si ce n'est pas déjà le cas
+import { FaShoppingCart } from 'react-icons/fa';
+import Sidebar from './Sidebar';
 
 const Projets = ({ searchTerm }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [activePage, setActivePage] = useState(1);
   const [cartItems, setCartItems] = useState([]);
-  const [showSidebar, setShowSidebar] = useState(false); // Assurez-vous que setShowSidebar est correctement initialisé
+  const [showSidebar, setShowSidebar] = useState(false);
   const itemsPerPage = 10;
 
   const items = [
@@ -59,17 +62,14 @@ const Projets = ({ searchTerm }) => {
   };
 
   const handleAddToCart = (item) => {
-    // Vérifiez si l'item est déjà dans le panier
     const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
 
     if (existingItem) {
-      // Si l'item existe déjà, mettez à jour la quantité
       const updatedItems = cartItems.map((cartItem) =>
         cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
       );
       setCartItems(updatedItems);
     } else {
-      // Sinon, ajoutez l'item avec une quantité initiale de 1
       setCartItems([...cartItems, { ...item, quantity: 1 }]);
     }
   };
@@ -106,7 +106,21 @@ const Projets = ({ searchTerm }) => {
           pages={Math.ceil(filteredItems.length / itemsPerPage)}
           onActivePageChange={handlePageChange}
         >
-          {/* Pagination ici */}
+          <CPaginationItem disabled={activePage === 1} onClick={() => handlePageChange(activePage - 1)}>
+            Previous
+          </CPaginationItem>
+          {[...Array(Math.ceil(filteredItems.length / itemsPerPage)).keys()].map((page) => (
+            <CPaginationItem
+              key={page + 1}
+              active={page + 1 === activePage}
+              onClick={() => handlePageChange(page + 1)}
+            >
+              {page + 1}
+            </CPaginationItem>
+          ))}
+          <CPaginationItem disabled={activePage === Math.ceil(filteredItems.length / itemsPerPage)} onClick={() => handlePageChange(activePage + 1)}>
+            Next
+          </CPaginationItem>
         </CPagination>
       </div>
 
@@ -121,18 +135,13 @@ const Projets = ({ searchTerm }) => {
       </AnimatePresence>
 
       <div>
-        {/* Votre contenu JSX pour afficher les items */}
         <div className={styles.cartIcon} onClick={() => setShowSidebar(true)}>
           <FaShoppingCart size={30} />
           {cartItems.length > 0 && <span className={styles.cartItemCount}>{cartItems.length}</span>}
         </div>
       </div>
 
-      {/* Affichage conditionnel de la Sidebar */}
       <Sidebar isOpen={showSidebar} onClose={() => setShowSidebar(false)} items={cartItems} onDeleteItem={setCartItems} />
-
-      {/* Autres éléments JSX comme la pagination, les modals, etc. */}
-      
     </>
   );
 };
