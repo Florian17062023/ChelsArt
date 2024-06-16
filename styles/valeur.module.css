@@ -11,12 +11,11 @@
     font-size: 45px;
     margin-bottom: 20px;
     text-align: center;
-    background: linear-gradient(to right, white, black); /* Dégradé de blanc à noir */
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  background-clip: text;
- 
+    background: linear-gradient(to right, white, black);
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-clip: text;
   }
   
   .card {
@@ -27,22 +26,21 @@
     height: 22rem;
     width: 18rem;
     padding-top: 1rem;
-    
   }
   
   .cardBody {
-    padding: 2rem; /* Ajusté pour rendre l'intérieur de la carte plus espacée */
+    padding: 2rem;
   }
   
   .cardTitle {
     font-weight: bold;
-    font-size: 24px; /* Ajusté pour correspondre à votre demande */
-    margin-bottom: 1rem; /* Ajusté pour donner plus d'espace sous le titre */
+    font-size: 24px;
+    margin-bottom: 1rem;
     text-align: center;
   }
   
   .cardText {
-    font-size: 16px; /* Ajusté pour correspondre à votre demande */
+    font-size: 16px;
     color: #666;
   }
   
@@ -58,5 +56,63 @@
     padding: 10px;
     display: flex;
     justify-content: center;
+  }
+  
+  /* Styles pour les écrans moyens */
+  @media (max-width: 992px) {
+    .valeursTitle {
+      font-size: 36px;
+    }
+  
+    .col {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    .card {
+      height: 20rem;
+      width: 16rem;
+    }
+  
+    .cardBody {
+      padding: 1.5rem;
+    }
+  
+    .cardTitle {
+      font-size: 20px;
+    }
+  
+    .cardText {
+      font-size: 14px;
+    }
+  }
+  
+  /* Styles pour les petits écrans */
+  @media (max-width: 576px) {
+    .valeursTitle {
+      font-size: 28px;
+    }
+  
+    .col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .card {
+      height: 18rem;
+      width: 14rem;
+    }
+  
+    .cardBody {
+      padding: 1rem;
+    }
+  
+    .cardTitle {
+      font-size: 18px;
+    }
+  
+    .cardText {
+      font-size: 12px;
+    }
   }
   
