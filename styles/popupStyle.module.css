@@ -118,13 +118,45 @@
   margin-top: 1.5rem;
 }
 
-/* Styles spécifiques pour mobile */
-@media (max-width: 576px) {
+/* Styles pour les grands écrans */
+@media (min-width: 992px) {
+  .popupContent {
+    max-width: 800px;
+    max-height: 600px;
+  }
+
+  .imageContainer {
+    width: 40%;
+  }
+
+  .contentContainer {
+    width: 60%;
+  }
+}
+
+/* Styles pour les écrans moyens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .popupContent {
+    max-width: 700px;
+    max-height: 500px;
+  }
+
+  .imageContainer {
+    width: 45%;
+  }
+
+  .contentContainer {
+    width: 55%;
+  }
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 767px) {
   .popupContent {
     flex-direction: column;
-    width: 100%;
-    height: 250%;
-    padding: 1rem;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
   }
 
   .imageContainer {
@@ -133,29 +165,15 @@
     margin-bottom: 1rem;
   }
 
-  .cardImgTop {
-    max-height: 175px;
-  }
-
   .contentContainer {
     width: 100%;
   }
 
-  .quantityContainer {
-    flex-direction: column;
-    margin-top: 1rem;
-  }
-
-  .quantityContainer label {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
+  .cardImgTop {
+    max-height: 250px;
   }
 
   .quantityControls {
-    flex-direction: column;
-  }
-
-  .quantityButton {
-    margin: 0.5rem 0;
+    justify-content: center;
   }
 }

@@ -87,7 +87,7 @@
   .quantityContainer {
     display: flex;
     align-items: center;
-    border: 1.5px solid #ffffff;
+    border: 1.5px solid #fcfcfc9d;
     padding: 5px;
     margin-top: 10px;
     border-radius: 2rem;
