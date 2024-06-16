@@ -1,0 +1,62 @@
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(243, 208, 220);
+  }
+  
+  .valeursTitle {
+    font-weight: bold;
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(to right, white, black); /* Dégradé de blanc à noir */
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  background-clip: text;
+ 
+  }
+  
+  .card {
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    height: 22rem;
+    width: 18rem;
+    padding-top: 1rem;
+    
+  }
+  
+  .cardBody {
+    padding: 2rem; /* Ajusté pour rendre l'intérieur de la carte plus espacée */
+  }
+  
+  .cardTitle {
+    font-weight: bold;
+    font-size: 24px; /* Ajusté pour correspondre à votre demande */
+    margin-bottom: 1rem; /* Ajusté pour donner plus d'espace sous le titre */
+    text-align: center;
+  }
+  
+  .cardText {
+    font-size: 16px; /* Ajusté pour correspondre à votre demande */
+    color: #666;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .col {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  

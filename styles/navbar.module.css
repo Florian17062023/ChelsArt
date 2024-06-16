@@ -1,53 +1,42 @@
-/* styles/navbar.module.css */
+
 .nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    padding: 10px 0;
-    position: relative;
-  }
-  
-  .nav::before,
-  .nav::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px;
-    
-  }
-  
-  .nav::before {
-    top: 0;
-  }
-  
-  .nav::after {
-    bottom: 0;
-  }
-  
-  .ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .li {
-    margin: 0 15px;
-  }
-  
-  .li a {
-    text-decoration: none;
-    color: #494848;;
-    padding: 10px 15px;
-    display: block;
-    transition: color 0.3s ease-in-out;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
-  .li a:hover {
-    color: rgba(243, 208, 220);
-  }
-  
+  display: flex;
+  justify-content: center; /* Centrer les éléments horizontalement */
+  align-items: center;
+  background: white;
+  padding: 10px 0;
+  position: relative;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.li {
+  margin: 0 15px;
+}
+
+.li a {
+  text-decoration: none;
+  color: #494848;
+  padding: 10px 15px;
+  display: block;
+  transition: color 0.3s ease-in-out;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.li a:hover {
+  color: rgba(243, 208, 220);
+}
+
+/* Styles pour les icônes */
+.icon {
+  width: 25px; /* Ajustez la taille de l'icône selon vos besoins */
+  height: 25px;
+  margin-left: 10px; /* Marge entre les icônes */
+  cursor: pointer; /* Définissez le curseur pour indiquer qu'il est cliquable */
+}

@@ -80,3 +80,26 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.cartIcon {
+  font-size: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000; /* Assurez-vous que l'icône du panier soit au-dessus de la sidebar */
+  margin-left: auto; /* Déplace l'icône du panier à l'extrême droite de la barre */
+  margin-right: 20px; /* Ajoute une marge à droite de l'icône du panier pour l'esp */
+}
+
+.cartIcon:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+

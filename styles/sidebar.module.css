@@ -1,0 +1,144 @@
+.sidebar {
+    position: fixed;
+    right: -400px; /* Position hors de la vue initiale */
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: #d3b899;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    overflow-y: auto; /* Activer le défilement vertical */
+    max-height: 100%; /* Hauteur maximale */
+  }
+  
+  .sidebar.open {
+    right: 0; /* Déplacer la sidebar dans la vue lorsqu'elle est ouverte */
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .sidebarTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .divider {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 10px 0;
+  }
+  
+  .cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .itemLeft {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+  }
+  
+  .cartItemImage {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+  
+  .itemDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .itemTitle {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .itemPrice {
+    margin: -0.1rem 0;
+  }
+  
+  .quantityContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 2rem;
+  }
+  
+  .quantityButton {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .quantityInput {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .itemRight {
+    text-align: right;
+  }
+  
+  .totalPrice {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+  
+  .commandButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 2rem;
+  }
+  
+  .deleteButton {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  

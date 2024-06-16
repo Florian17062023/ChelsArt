@@ -3,12 +3,12 @@ import { CCard, CCardImage, CCardBody, CCardTitle, CCardText } from '@coreui/rea
 import { motion } from 'framer-motion';
 import styles from '../styles/popupStyle.module.css';
 
-const ProductPopup = ({ item, onClose }) => {
-  const [showFullDescription, setShowFullDescription] = useState(false);
-  const maxDescriptionLength = 100; // Nombre maximum de caractères à afficher initialement
+const ProductPopup = ({ item, onClose, handleAddToCart }) => {
+  const [quantity, setQuantity] = useState(1); // État pour la quantité sélectionnée
 
-  const toggleDescription = () => {
-    setShowFullDescription(!showFullDescription);
+  const handleQuantityChange = (event) => {
+    const quantity = parseInt(event.target.value);
+    setQuantity(quantity);
   };
 
   return (
@@ -21,7 +21,6 @@ const ProductPopup = ({ item, onClose }) => {
           &times;
         </div>
         <div className={styles.imageContainer}>
-          {/* Ici, vous pouvez ajouter le carrousel d'images */}
           <CCardImage
             orientation="top"
             src={item.image}
@@ -33,22 +32,24 @@ const ProductPopup = ({ item, onClose }) => {
           <CCardBody className={styles['card-body']}>
             <CCardTitle className={styles['card-title']}>{item.title}</CCardTitle>
             <CCardText className={styles['card-text']}>
-              {showFullDescription ? item.description : `${item.description.slice(0, maxDescriptionLength)}...`}
-              {item.description.length > maxDescriptionLength && (
-                <span className={styles.readMoreButton} onClick={toggleDescription}>
-                  {showFullDescription ? ' Voir moins' : ' Voir la suite'}
-                </span>
-              )}
+              {item.description}
             </CCardText>
             <div>
               <label htmlFor="quantity">Quantité :</label>
-              <select id="quantity" name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                value={quantity}
+                onChange={handleQuantityChange}
+              />
             </div>
-            <button className={styles.buyButton}>Je veux</button>
+            <div className={styles.price}>
+              Prix : {item.price} €
+            </div>
+            <button className={styles.buyButton} onClick={() => handleAddToCart({ ...item, quantity })}>
+              Je veux
+            </button>
           </CCardBody>
         </div>
       </div>

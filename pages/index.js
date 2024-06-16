@@ -1,6 +1,7 @@
 import React from 'react';
-import Carousel from '../composents/Caroussel';
+import Carousel from '../composents/Carousel';
 import About from '../composents/About';
+import Valeur from '../composents/Valeur';
 
 
 
@@ -9,6 +10,7 @@ const HomePage = () => {
     <div>
       <Carousel />
       <About/>
+      <Valeur/>
     </div>
     
      
