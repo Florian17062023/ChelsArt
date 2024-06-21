@@ -4,10 +4,11 @@
   align-items: center;
   height: 16vh;
   background: white;
+  padding-left: 10rem;
 }
 
 .logo {
-  height: 8rem;
+  height: 10rem;
   cursor: pointer;
 }
 

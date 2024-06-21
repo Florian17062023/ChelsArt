@@ -8,10 +8,12 @@ import styles from '../styles/layout.module.css';
 const Layout = ({ children }) => {
   return (
     <div className="container-flex">
-      <Header />
+      <div className={styles.headerIconContainer}>
+        <Header />
+        <IconBar />
+      </div>
       <div className={styles.navbarContainer}>
         <Navbar />
-        <IconBar />
       </div>
       <div className="content-container">{children}</div>
       <Footer />
